@@ -1,3 +1,4 @@
+package ejer7_normales;
 public class g1_e4 {
     public static void main(String[] args) {
         float gradosC=27;

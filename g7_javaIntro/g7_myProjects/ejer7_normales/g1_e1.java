@@ -1,3 +1,4 @@
+package ejer7_normales;
 import java.util.Scanner;
 
 public class g1_e1{
