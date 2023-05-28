@@ -11,9 +11,11 @@ public class g1_e10 {
 
         System.out.println("Ingresa el 1er número: ");
         double n1 = entrada.nextDouble();
+        entrada.nextLine(); // Consumir el salto de línea pendiente
 
         System.out.println("Ingresa el 2do número: ");
         double n2 = entrada.nextDouble();
+        entrada.nextLine(); // Consumir el salto de línea pendiente
 
         Calculadora(n1, n2);
         System.out.println("Bye!");
@@ -21,18 +23,19 @@ public class g1_e10 {
 
     public static void Calculadora(double x, double y){
         int op=0;
-
+        int i=0;
         while(!salir){
             System.out.println("MENU");
             System.out.println("1. Sumar");
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
-            System.out.println("4 Dividor");
+            System.out.println("4. Dividor");
             System.out.println("5. Salir");
 
             System.out.println("Ingresa opcion: ");
             op=entrada.nextInt();
-
+            entrada.nextLine(); // Consumir el salto de línea pendiente
+            
             switch(op){
                 case 1:
                     System.out.println("Suma es: "+(x+y));
@@ -52,11 +55,13 @@ public class g1_e10 {
                     if (confirmacion.equalsIgnoreCase("s")) {
                         salir=true;
                     }
+                    System.out.println("***No deberia de imprimir el MENU***");
                     break;
                 default:
                     System.out.println("Opcion invalida");
                     break;
             }
+            System.out.println("\n");
         }
     }
 }
