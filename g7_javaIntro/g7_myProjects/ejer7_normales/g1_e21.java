@@ -77,8 +77,8 @@ public class g1_e21 {
 
     public static void Recortar(int[][] arrayGrande, int fila, int columna, int[][] arrayAux){
         int k=0, m=0;
-        for (int i = fila; i < arrayAux.length; i++) {
-            for (int j = columna; j < arrayAux.length; j++) {
+        for (int i = fila; i < fila+3; i++) {
+            for (int j = columna; j < columna+3; j++) {
                 arrayAux[k][m]=arrayGrande[i][j];
                 m++;
             }
