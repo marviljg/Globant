@@ -1,32 +1,32 @@
 package ejer7_extra;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-import javax.sound.midi.Soundbank;
-
 public class gE_e4 {
-    
     public static void main(String[] args) {
-         Scanner entrada = new Scanner(System.in);
-         System.out.println("¿Tipo de socio?: ");
-         char socio=entrada.next().charAt(0);
+        Scanner entrada = new Scanner(System.in);
+        Map<Integer, String> diccionario = new HashMap<>();
 
-         System.out.println("¿Costo a pagar?: ");
-         double costo=entrada.nextDouble();
-
-         switch (socio){
-            case 'a':
-                System.out.println("Costo a pagar: "+(costo*0.5));
-                break;
-            case 'b':
-                System.out.println("Costo a pagar: "+(costo*0.65));
-                break;
-            case 'c':
-                System.out.println("Costo a pagar: "+costo);
-                break;
-            default:
-                System.out.println("Algo salio mal");
-                break;
-         }
+        //Agregamos elementos al hashmap
+        diccionario.put(1, "I");
+        diccionario.put(2, "II");
+        diccionario.put(3, "III");
+        diccionario.put(4, "IV");
+        diccionario.put(5, "V");
+        diccionario.put(6, "VI");
+        diccionario.put(7, "VII");
+        diccionario.put(8, "VIII");
+        diccionario.put(9, "IX");
+        diccionario.put(10, "X");
+        
+        System.out.println("¿Numero a convertir? (de 1 a 10): ");
+        int convertir = entrada.nextInt();
+        if (convertir>10 || convertir<0){
+            System.out.println("Valor ingresado INCORRECTO");
+        }else{
+            System.out.println("Valor convertido: "+diccionario.get(convertir));
+        }
     }
 }
